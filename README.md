@@ -16,7 +16,7 @@ reproduction of a commercial applicant-tracking system.
 - Stage 0: scope and completion criteria defined
 - Stage 1: MATH 308 baseline reconstructed; resume claims corrected
 - Stage 2: ApplyPilot export, cleaning, deduplication, and quality checks implemented; real corpus currently empty
-- Audit hypotheses: preregistered; implementation has not started
+- Audit hypotheses: preregistered at commit `8f1e3be565d61676f96caadf14440f17206bf5c1`; implementation has not started
 - Audit analysis: not started
 
 ## Completion criteria
