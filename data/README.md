@@ -6,10 +6,9 @@
 file is read-only during export. Raw job descriptions, URLs, application notes,
 resume choices, and other private job-search state are not committed to Git.
 
-ApplyPilot currently stores `createdAt` but drops the browser extension's
-`capturedAt` field when normalizing an application. Therefore `source_date`
-means the ApplyPilot record creation date, not an independently verified posting
-or capture timestamp.
+New ApplyPilot records preserve the browser extension's `capturedAt` timestamp.
+For legacy records that lack it, `source_date` falls back to the ApplyPilot
+record creation date. Neither value proves the employer's original posting date.
 
 ## Output schema
 
@@ -21,7 +20,7 @@ or capture timestamp.
 | `category` | Deterministic title heuristic: swe/data/consulting/product/unclassified |
 | `text` | Conservatively cleaned responsibilities and qualifications text |
 | `word_count` | Token count after cleaning |
-| `source_date` | ApplyPilot record creation date |
+| `source_date` | Capture date, or legacy record creation date when capture time is absent |
 
 ## Cleaning and exclusion rules
 
@@ -43,4 +42,3 @@ whether every planned category has at least 20 retained descriptions.
 The repository ignores all files under `data/raw/`. Tests use obviously
 synthetic `.test` domains in `tests/fixtures/`; fixture records must never be
 included in the research corpus.
-

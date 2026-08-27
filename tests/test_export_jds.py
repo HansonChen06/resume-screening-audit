@@ -12,6 +12,7 @@ from export_jds import (  # noqa: E402
     export_records,
     infer_category,
     normalize_url,
+    source_date,
 )
 
 
@@ -49,6 +50,13 @@ class ExportJdsTest(unittest.TestCase):
 
     def test_ambiguous_titles_remain_unclassified(self):
         self.assertEqual(infer_category("AI Product Manager"), "unclassified")
+
+    def test_capture_date_precedes_legacy_creation_fallback(self):
+        self.assertEqual(source_date(self.applications[0]), "2026-08-19")
+        self.assertEqual(
+            source_date({"createdAt": "2026-08-20T12:00:00.000Z"}),
+            "2026-08-20",
+        )
 
 
 if __name__ == "__main__":

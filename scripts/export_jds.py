@@ -143,7 +143,7 @@ def infer_category(title: str) -> str:
 
 
 def source_date(application: dict) -> str:
-    raw = normalize_space(application.get("createdAt"))
+    raw = normalize_space(application.get("capturedAt") or application.get("createdAt"))
     if not raw:
         return ""
     try:
@@ -253,7 +253,7 @@ def build_report(records: list[dict], rejections: list[Rejection], source_path: 
             category_counts.get(category, 0) >= 20 for category in target_categories
         ),
         "limitations": [
-            "ApplyPilot currently persists createdAt but discards the extension's capturedAt field.",
+            "Legacy ApplyPilot records may lack capturedAt; source_date then falls back to createdAt.",
             "Title categories are deterministic heuristics and require manual review before analysis.",
             "Boilerplate cleaning is conservative and may retain or remove atypically formatted content.",
         ],
