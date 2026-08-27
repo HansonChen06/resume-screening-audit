@@ -14,7 +14,8 @@ reproduction of a commercial applicant-tracking system.
 ## Status
 
 - Stage 0: scope and completion criteria defined
-- Stage 1: MATH 308 baseline recovery in progress
+- Stage 1: MATH 308 baseline reconstructed; resume claims corrected
+- Stage 2: ApplyPilot export, cleaning, deduplication, and quality checks implemented; real corpus currently empty
 - Audit hypotheses: not yet preregistered
 - Audit analysis: not started
 
@@ -50,3 +51,17 @@ The project is complete only when:
 6. Report paired effects, uncertainty, multiplicity correction, and robustness checks.
 7. Deliver a tested one-command pipeline and a 6-8 page report.
 
+## Export the local JD corpus
+
+```bash
+python3 scripts/export_jds.py \
+  --input /Users/sihanchen/Desktop/ApplyPilot-MVP/data/data.json
+```
+
+The command writes ignored, local-only files under `data/raw/`: the retained
+corpus, a rejection ledger, and a quality report. It never modifies ApplyPilot.
+Run the current data-stage tests with:
+
+```bash
+python3 -m unittest discover -s tests -v
+```

@@ -1,0 +1,29 @@
+{
+  "applications": [
+    {
+      "id": "software-1",
+      "role": "Software Developer Intern",
+      "company": "Example Engineering",
+      "sourceUrl": "https://example.test/jobs/1?utm_source=test",
+      "createdAt": "2026-08-20T12:00:00.000Z",
+      "description": "Responsibilities\n\nBuild and test backend services using Python and SQL. Work with engineers to review requirements, implement REST APIs, diagnose failures, document trade-offs, write automated tests, improve deployment workflows, analyze logs, and maintain reliable services. Participate in code review, communicate technical decisions, validate data inputs, support incident follow-up, and improve monitoring.\n\nQualifications\n\nExperience with Python, SQL, Git, Linux, testing, data structures, debugging, and software development. Ability to explain implementation choices, learn unfamiliar code, work collaboratively, and deliver maintainable production code.\n\nAbout Us\n\nExample Engineering changes the world.\n\nBenefits\n\nSalary range and benefits may include insurance."
+    },
+    {
+      "id": "software-duplicate",
+      "role": "Software Developer Intern",
+      "company": "Example Engineering",
+      "sourceUrl": "https://example.test/jobs/1?ref=duplicate",
+      "createdAt": "2026-08-20T12:00:00.000Z",
+      "description": "Responsibilities\n\nBuild and test backend services using Python and SQL. Work with engineers to review requirements, implement REST APIs, diagnose failures, document trade-offs, write automated tests, improve deployment workflows, analyze logs, and maintain reliable services. Participate in code review, communicate technical decisions, validate data inputs, support incident follow-up, and improve monitoring.\n\nQualifications\n\nExperience with Python, SQL, Git, Linux, testing, data structures, debugging, and software development. Ability to explain implementation choices, learn unfamiliar code, work collaboratively, and deliver maintainable production code."
+    },
+    {
+      "id": "short-1",
+      "role": "Data Analyst",
+      "company": "Short Example",
+      "sourceUrl": "https://example.test/jobs/2",
+      "createdAt": "2026-08-21T12:00:00.000Z",
+      "description": "Analyze data with SQL and prepare reports."
+    }
+  ],
+  "resumes": []
+}
