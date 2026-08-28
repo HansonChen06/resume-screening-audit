@@ -96,8 +96,11 @@ included in committed fixtures or model inputs.
 ## Models
 
 1. TF-IDF baseline.
-2. Reconstructed rank-100 MATH 308 SVD word embedding with documented pooling.
-3. One frozen local sentence-transformer model.
+2. Rank-100 SVD text embedding using the same truncation-and-cosine method as
+   MATH 308, fitted to the frozen audit corpus because the original
+   co-occurrence matrix was not recovered.
+3. Frozen `sentence-transformers/all-MiniLM-L6-v2` revision recorded in
+   `docs/pre-score-freeze.md`.
 
 Exact package and model revisions are locked in the pre-score amendment. A model
 cannot be silently upgraded during the experiment.
@@ -113,4 +116,3 @@ cannot be silently upgraded during the experiment.
   https://doi.org/10.1257/pol.3.4.148
 - Statsmodels `TTestPower` documentation for one-sample and paired-sample power
   calculations: https://www.statsmodels.org/stable/generated/statsmodels.stats.power.TTestPower.html
-

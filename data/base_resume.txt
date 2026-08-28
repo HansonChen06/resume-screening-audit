@@ -1,0 +1,53 @@
+APPLICANT NAME
+Montreal, Quebec | applicant@example.test | github.com/example
+
+EDUCATION
+McGill University
+Bachelor of Science, Mathematics and Computer Science, expected April 2028
+
+TECHNICAL SKILLS
+Programming: C, C++, Python, SQL, JavaScript, TypeScript, Java, R, Bash.
+Data and analytics: exploratory data analysis, data modelling, predictive analytics,
+machine learning workflows, dimensionality reduction, dashboards, and reporting.
+Web and APIs: React, HTML5, CSS3, Next.js, REST APIs, FastAPI, Node.js.
+Embedded and IoT: Zephyr RTOS, nRF5340, UART, firmware validation, edge model
+deployment, and real-time sensor data.
+Testing and tools: test plans, unit and integration testing, Pytest, XCTest, Git,
+GitHub Actions, Docker, Linux, and PostgreSQL.
+
+EXPERIENCE
+Software Engineer Intern, AAVAA, Montreal, Quebec, January-April 2025
+- Developed and maintained C/C++ software for edge processing of eight-channel
+  sensor streams at 500 Hz on IoT hardware.
+- Deployed a compressed SVM model to nRF5340 hardware running Zephyr RTOS,
+  reducing model size by 43% and memory use by 31% while retaining 96% of
+  baseline performance.
+- Compared quantization, zlib, and LZ4 using memory, runtime, and inference
+  quality measurements; the team adopted the resulting recommendation.
+- Created validation workflows for firmware and UART communication, isolated
+  failures by root cause, reached 99.2% reliability, and documented results.
+
+PROJECTS
+Event ParkRide - Data Pipeline and Analytics Service
+- Built Python ingestion scripts and a SQL-backed service with documented data
+  models and scheduled refresh jobs.
+- Reconciled inconsistent formats and quality across Google Maps, Ticketmaster,
+  TransLink, 21 municipal open-data sources, and a commercial API.
+- Wrote 67 automated unit and integration tests for parsing, ranking, and
+  business rules, run on every change through continuous integration.
+
+RiskFlow - Analytics Dashboard and Scoring Service
+- Built a React and TypeScript dashboard and REST API that scores events using
+  six configurable rules and displays trends, latency, and weighted evidence.
+- Built a historical cohort replay comparing draft configurations with the live
+  baseline to quantify impact before deployment.
+
+Simulated Operating System
+- Implemented process control blocks, ready queues, five scheduling policies,
+  demand paging, page-fault recovery, and LRU replacement in C.
+- Evaluated behaviour across more than 30 workload scenarios and documented
+  performance under load.
+
+LANGUAGES
+Mandarin Chinese, English, French.
+
