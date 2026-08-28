@@ -2,9 +2,11 @@
 
 ## Source
 
-`data/raw/jds.csv` is generated only from the local ApplyPilot store. The source
-file is read-only during export. Raw job descriptions, URLs, application notes,
-resume choices, and other private job-search state are not committed to Git.
+`data/raw/jds.csv` combines the local ApplyPilot store with a frozen snapshot of
+live public postings from the documented Greenhouse Job Board and Lever
+Postings APIs, as authorized by `docs/amendment-01-public-ats.md`. Source files
+are read-only during export. Raw full text, URLs, application notes, resume
+choices, and other private job-search state are not committed to Git.
 
 New ApplyPilot records preserve the browser extension's `capturedAt` timestamp.
 For legacy records that lack it, `source_date` falls back to the ApplyPilot
@@ -15,8 +17,8 @@ record creation date. Neither value proves the employer's original posting date.
 | Field | Meaning |
 |---|---|
 | `jd_id` | Stable hash derived from normalized source URL or record identity |
-| `company` | ApplyPilot company field |
-| `title` | ApplyPilot role field |
+| `company` | Employer name from ApplyPilot or the public ATS feed |
+| `title` | Posting title from ApplyPilot or the public ATS feed |
 | `category` | Deterministic title heuristic: swe/data/consulting/product/unclassified |
 | `text` | Conservatively cleaned responsibilities and qualifications text |
 | `word_count` | Token count after cleaning |
@@ -33,7 +35,7 @@ record creation date. Neither value proves the employer's original posting date.
   similarity of at least 0.90.
 - Keep ambiguous title categories as `unclassified`; never force a label.
 
-`jd_rejections.csv` records every rejected ApplyPilot ID and reason.
+`jd_rejections.csv` records every rejected source record and reason.
 `quality_report.json` records accepted counts, category counts, limitations, and
 whether every planned category has at least 20 retained descriptions.
 
