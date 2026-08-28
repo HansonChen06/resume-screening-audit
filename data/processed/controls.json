@@ -1,0 +1,26 @@
+{
+  "seed": 42,
+  "jd_count": 269,
+  "variant_count": 29,
+  "models": {
+    "tfidf": {
+      "deterministic_identity_score": 0.9999999999999765,
+      "swe_resume_mean": 0.023737783358231394,
+      "swe_nursing_mean": 0.00963947588548229,
+      "positive_control_pass": true
+    },
+    "svd100": {
+      "deterministic_identity_score": 1.0000000000000007,
+      "swe_resume_mean": 0.029496270819629838,
+      "swe_nursing_mean": 0.013780314192310064,
+      "positive_control_pass": true
+    },
+    "minilm": {
+      "deterministic_identity_score": 0.9999999561224744,
+      "swe_resume_mean": 0.2996195591451583,
+      "swe_nursing_mean": 0.058146186917729804,
+      "positive_control_pass": true
+    }
+  },
+  "svd_explained_variance": 0.6830391753657883
+}

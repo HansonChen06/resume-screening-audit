@@ -3,11 +3,21 @@
 __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
+tmp/
 
 # Generated artifacts
 data/processed/
 figures/*.pdf
 figures/*.png
+!data/processed/
+data/processed/*
+!data/processed/scores.csv
+!data/processed/results.csv
+!data/processed/controls.json
+!data/processed/robustness.csv
+!figures/main_effect.png
+!figures/category_heatmap.png
+!figures/robustness.png
 report/*.aux
 report/*.bbl
 report/*.blg
@@ -19,4 +29,3 @@ report/*.out
 # Raw private job-search material is never committed by default.
 data/raw/*
 !data/raw/.gitkeep
-
