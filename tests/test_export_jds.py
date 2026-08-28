@@ -51,6 +51,12 @@ class ExportJdsTest(unittest.TestCase):
     def test_ambiguous_titles_remain_unclassified(self):
         self.assertEqual(infer_category("AI Product Manager"), "unclassified")
 
+    def test_french_software_title_is_classified(self):
+        self.assertEqual(
+            infer_category("Stagiaire développeur mobile - React Native / iOS"),
+            "swe",
+        )
+
     def test_capture_date_precedes_legacy_creation_fallback(self):
         self.assertEqual(source_date(self.applications[0]), "2026-08-19")
         self.assertEqual(

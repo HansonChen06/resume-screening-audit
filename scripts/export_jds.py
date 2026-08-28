@@ -39,12 +39,18 @@ BOILERPLATE_PHRASES = re.compile(
 )
 
 CATEGORY_RULES = {
-    "data": re.compile(r"\b(data|analytics|machine learning|ml|ai|scientist)\b", re.I),
-    "consulting": re.compile(r"\b(consult|advisory|strategy|transformation)\b", re.I),
+    "data": re.compile(
+        r"\b(data|analytics|machine learning|ml|ai|scientist|donn[ée]es|analytique)\b",
+        re.I,
+    ),
+    "consulting": re.compile(
+        r"\b(consult|advisory|strategy|transformation|conseil|strat[ée]gie)\b", re.I
+    ),
     "product": re.compile(r"\b(product manager|product management|product owner)\b", re.I),
     "swe": re.compile(
         r"\b(software|developer|engineer|engineering|full[- ]?stack|front[- ]?end|"
-        r"back[- ]?end|devops|cloud)\b",
+        r"back[- ]?end|devops|cloud|d[ée]veloppeu(?:r|se)|ing[ée]nieu(?:r|re)|"
+        r"informatique)\b",
         re.I,
     ),
 }
